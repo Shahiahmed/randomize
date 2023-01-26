@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="coding.png">
+    <title>Randomizer</title>
+</head>
+
+<body>
+    <div class="randomizer">
+        <h1>Randomizer</h1>
+        <input type="text" class="i-1" placeholder="add element">
+        <button id="rand"> + </button>
+        <button id="rand3"> - </button>
+        <div class="out"></div>
+    </div>
+    <div class="randomizer2">
+        <button id="rand2">Randomize</button>
+        <div class="out2"></div>
+    </div>
+    <!--JavaScript-->
+    <script>
+        document.querySelector("#rand").onclick = myClick;
+        document.querySelector("#rand2").onclick = myClick2;
+        document.querySelector("#rand3").onclick = myClick3;
+        let arrays = []
+        function myClick(){    
+            let a = document.querySelector('.i-1').value;
+            arrays.push(a)
+            document.querySelector('.out').innerHTML =`${arrays}`;  
+        }
+        function myClick2(){
+            index = Math.floor(Math.random()*arrays.length)
+            document.querySelector('.out2').innerHTML =  arrays[index];
+        }
+        function myClick3(){
+            arrays.pop()
+            document.querySelector('.out').innerHTML =`${arrays}`;
+        }
+    </script>
+    <!--JavaScript-->
+</body>
+</html>

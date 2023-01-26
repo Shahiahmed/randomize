@@ -1,0 +1,17 @@
+body{
+    background-color:azure
+}
+.randomizer {
+    text-align: center;
+    border-style: dashed;
+    padding:20px 20px 20px 20px;
+}
+
+.out2{
+    padding-top: 10px;
+}
+.randomizer2{
+    
+    text-align: center;
+    padding-top: 50px;
+}
